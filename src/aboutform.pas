@@ -12,7 +12,7 @@ const
   appAuthorWebsite: string = 'https://anthonyirwin.com';
   appWebsite: string = 'https://desktopshortcuteditor.anthonyirwin.com';
   appRepo: string = 'https://github.com/anthonyirwin82/desktopshortcuteditor';
-  appDescription: string = 'Desktop Shortcut Editor allows you to easily add, search and edit desktop entry files.';
+  appDescription: string = 'Desktop Shortcut Editor makes it very easy to add, search and edit desktop entry files in desktop environments and application launchers that uses the free desktop entry file specification.';
 type
 
   { TFrmAbout }

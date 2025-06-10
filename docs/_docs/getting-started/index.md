@@ -4,26 +4,26 @@ permalink: /docs/getting-started/home/
 redirect_from: /docs/index.html
 order: 1
 ---
-Desktop Shortcut Editor makes it very easy to add, search and edit desktop entry files in desktop environments and application launchers that uses the free desktop specification. 
+Desktop Shortcut Editor makes it very easy to add, search and edit desktop entry files in desktop environments and application launchers that uses the free desktop entry file specification. 
 
-![Desktop Shortcut Editor Main Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-main.png "Desktop Shortcut Editor Main Screen")
+![Desktop Shortcut Editor Main Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-main.png "Desktop Shortcut Editor Main Screen"){: .img-fluid}
 
 ## Searching for exising Desktop Entry Files
 You can search for desktop files by using the search box above the list of desktop file entries.
 
-![Desktop Shortcut Editor Search Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-search.png "Desktop Shortcut Editor Search Screen")
+![Desktop Shortcut Editor Search Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-search.png "Desktop Shortcut Editor Search Screen"){: .img-fluid}
 
 ## Changing the applications directory being shown
 You can change the applications directory being shown by clicking the location buttons at the top of the screen. You can also use alt + 1, alt + 2 and alt + 3 to change directories using the keyboard shortcuts.
 
-![Desktop Shortcut Editor Changing the applications directory shown]({{ site.baseurl }}/assets/img/desktopshortcuteditor-change-directories.png "Desktop Shortcut Editor Changing the applications directory shown")
+![Desktop Shortcut Editor Changing the applications directory shown]({{ site.baseurl }}/assets/img/desktopshortcuteditor-change-directories.png "Desktop Shortcut Editor Changing the applications directory shown"){: .img-fluid}
 
 ## Editing Desktop Entry Files
 You can edit desktop entry files by either double clicking it in the list or by clicking the 'Edit File in Text Editor' button. If there are no desktop entry files to edit then the 'Edit File in Text Editor' button will be disabled.
 
 If you require root access to edit the desktop entry file then a password dialog will popup to edit the file with elevated privileges.
 
-![Desktop Shortcut Editor Edit Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-edit.png "Desktop Shortcut Editor Edit Screen")
+![Desktop Shortcut Editor Edit Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-edit.png "Desktop Shortcut Editor Edit Screen"){: .img-fluid}
 
 ## Adding New Desktop Entry Files
 
@@ -31,13 +31,13 @@ To add a new desktop entry file you enter the filename with the .desktop extensi
 
 If you need root access to create the file then a password dialog will popup to create the file with elevated privileges.
 
-![Desktop Shortcut Editor Add Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-add.png "Desktop Shortcut Editor Add Screen")
+![Desktop Shortcut Editor Add Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-add.png "Desktop Shortcut Editor Add Screen"){: .img-fluid}
 
 ## Warning About Overwriting Existing Desktop Entry Files
 
 If the desktop entry filename already exists then you will get a warning dialog pop up. In most cases you should click the 'No' button because overwriting the file will create a blank new template for creating new desktop entry files and all existing information in the file will be lost.
 
-![Desktop Shortcut Editor Overwrite Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-overwrite.png "Desktop Shortcut Editor Overwrite Screen")
+![Desktop Shortcut Editor Overwrite Screen]({{ site.baseurl }}/assets/img/desktopshortcuteditor-overwrite.png "Desktop Shortcut Editor Overwrite Screen"){: .img-fluid}
 
 ## Information About the Desktop Entry file
 

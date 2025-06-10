@@ -10,6 +10,7 @@ object frmDesktopShortcutEditor: TfrmDesktopShortcutEditor
   Constraints.MinWidth = 520
   Menu = mnuMainMenu
   Position = poScreenCenter
+  LCLVersion = '4.1.0.0'
   OnShow = FormShow
   object btnUsrShare: TButton
     AnchorSideLeft.Control = Owner

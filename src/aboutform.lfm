@@ -66,10 +66,10 @@ object frmAbout: TfrmAbout
     Height = 19
     Top = 108
     Width = 623
-    Alignment = taCenter
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Top = 10
     Caption = 'lblDescription'
+    WordWrap = True
   end
   object Panel: TPanel
     AnchorSideLeft.Control = lblAppName

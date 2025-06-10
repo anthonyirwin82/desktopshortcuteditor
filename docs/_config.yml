@@ -2,7 +2,7 @@
 title: Desktop Shortcut Editor
 license: ""
 description: >
-  Desktop Shortcut Editor allows you to easily add, search and edit desktop entry files.
+  Desktop Shortcut Editor makes it very easy to add, search and edit desktop entry files in desktop environments and application launchers that uses the free desktop entry file specification.
 lang: en-US
 
 baseurl: "" # the subpath of your site, e.g. /blog/

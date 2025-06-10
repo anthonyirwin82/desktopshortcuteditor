@@ -45,7 +45,7 @@ type
     const
   	   usrShareLocation: string = '/usr/share/applications';
   		 usrLocalLocation: string = '/usr/local/share/applications';
-      websiteUrl: string = 'https://www.yahoo.com';
+      websiteUrl: string = 'https://desktopshortcuteditor.anthonyirwin.com';
     var
       dotLocalLocation: string;
       isNormalUserFile: boolean;

@@ -57,13 +57,13 @@ begin
                  'GenericName=\n' +
                  '# e.g. A free cross platform image editor\n' +
                  'Comment=\n' +
-                 '# the name of the icon\n' +
+                 '# the name of the icon or the full path filename\n' +
                  'Icon=\n' +
                  'Path=\n' +
                  'Exec=\n' +
                  'Terminal=false\n' +
                  'Type=Application\n' +
-                 'e.g. Graphics;2DGraphics;RasterGraphics;GTK;\n' +
+                 '# e.g. Graphics;2DGraphics;RasterGraphics;GTK;\n' +
                  'Categories=\n';
 
   if FileExists(aFilename) then

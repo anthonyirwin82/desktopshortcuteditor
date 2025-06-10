@@ -1,0 +1,172 @@
+# Site settings
+title: Desktop Shortcut Editor
+license: ""
+description: >
+  Desktop Shortcut Editor allows you to easily add, search and edit desktop entry files.
+lang: en-US
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://desktopshortcuteditor.anthonyirwin.com # the base hostname & protocol for your site
+git_address: https://github.com/anthonyirwin82/desktopshortcuteditor
+git_edit_address: https://github.com/anthonyirwin82/desktopshortcuteditor/tree/main/docs
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-target-blank
+  - jekyll-paginate-v2
+  - jekyll-auto-authors
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .vscode/
+  - .gitignore
+  - README.md
+  - vendor
+timezone: Australia/Brisbane
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _pages
+    type: pages
+  values:
+    layout: page
+    sectionid: pages
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /docs/:path/
+    output: true
+  pages:
+    permalink: /:title/
+    output: true
+  posts:
+    permalink: /blog/:title/
+    output: true
+
+# for jekyll-paginate-v2 and jekyll-auto-authors
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 10
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  sort_field: 'date'
+  sort_reverse: true
+  indexpage: 'index'
+  # Allow legacy pagination to work on things that use it.
+  paginate: 10
+  paginate_path: "/legacy/page:num/"
+
+autopages:
+
+  # Other autopage configs stay the same
+  enabled: true
+
+  categories:
+    enabled: false
+  tags:
+    enabled: false
+  collections:
+    enabled: true
+
+  authors:
+    enabled: true
+    data: '_data/authors.yml'
+    # Uncomment the line below to force exclude certain author usernames from autopage generation.
+    # exclude: [ "author1", "author2" ]
+    layouts: 
+      - 'author.html'
+    title: 'Posts by :author'
+    permalink: '/author/:author/'
+    slugify:
+      mode: 'default' # choose from [raw, default, pretty, ascii or latin]
+      cased: true # if true, the uppercase letters in slug will be converted to lowercase ones.
+
+jekyll-spaceship:
+  # default enabled processors
+  processors:
+    - table-processor
+    - mathjax-processor
+    - plantuml-processor
+    - mermaid-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-processor
+    - element-processor
+  mathjax-processor:
+    src:
+      - https://polyfill.io/v3/polyfill.min.js?features=es6
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    config:
+      tex:
+        inlineMath:
+          - ['$','$']
+          - ['\(','\)']
+        displayMath:
+          - ['$$','$$']
+          - ['\[','\]']
+      svg:
+        fontCache: 'global'
+    optimize: # optimization on building stage to check and add mathjax scripts
+      enabled: true # value `false` for adding to all pages
+      include: []   # include patterns for math expressions checking (regexp)
+      exclude: []   # exclude patterns for math expressions checking (regexp)
+  plantuml-processor:
+    mode: default  # mode value 'pre-fetch' for fetching image at building stage
+    css:
+      class: plantuml
+    syntax:
+      code: 'plantuml!'
+      custom: ['@startuml', '@enduml']
+    src: http://www.plantuml.com/plantuml/svg/
+  mermaid-processor:
+    mode: default  # mode value 'pre-fetch' for fetching image at building stage
+    css:
+      class: mermaid
+    syntax:
+      code: 'mermaid!'
+      custom: ['@startmermaid', '@endmermaid']
+    config:
+      theme: default
+    src: https://mermaid.ink/svg/
+  media-processor:
+    default:
+      id: 'media-{id}'
+      class: 'media'
+      width: '100%'
+      height: 350
+      frameborder: 0
+      style: 'max-width: 600px; outline: none;'
+      allow: 'encrypted-media; picture-in-picture'
+  emoji-processor:
+    css:
+      class: emoji
+    src: https://github.githubassets.com/images/icons/emoji/

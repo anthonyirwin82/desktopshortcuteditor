@@ -1,0 +1,56 @@
+{% comment %}
+Map grabs the doc sections, giving us an array of arrays. Join flattens all
+the items to a comma-delimited string. Split turns it into an array again.
+{% endcomment %}
+{% assign docs = site.data.docs | map: 'docs' | join: ',' | split: ',' %}
+
+{% comment %}
+Because this is built for every page, let's find where we are in the ordered
+document list by comparing URL strings. Then if there's something previous or
+next, let's build a link to it.
+{% endcomment %}
+
+{% for document in docs %}
+  {% assign document_url = document | prepend:"/docs/" | append:"/" %}
+  {% if document_url == page.url %}
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-between">
+        {% if forloop.first %}
+          <li class="page-item disabled">
+            <span class="page-link" tabindex="-1" aria-disabled="true">
+              &larr; Previous
+            </span>
+          </li>
+        {% else %}
+          {% assign previous = forloop.index0 | minus: 1 %}
+          {% assign previous_page = docs[previous] | prepend:"/docs/" | append:"/" %}
+          {% assign previous_doc = site.docs | where:"url", previous_page | first %}
+          <li class="page-item">
+            <a class="page-link" href="{{ previous_doc.url | relative_url }}" aria-label="Previous">
+              &larr; Previous
+            </a>
+          </li>
+        {% endif %}
+
+        {% if forloop.last %}
+          <li class="page-item disabled">
+            <span class="page-link" tabindex="-1" aria-disabled="true">
+              Next &rarr;
+            </span>
+          </li>
+        {% else %}
+          {% assign next = forloop.index0 | plus: 1 %}
+          {% assign next_page = docs[next] | prepend:"/docs/" | append:"/" %}
+          {% assign next_doc = site.docs | where:"url", next_page | first %}
+          <li class="page-item">
+            <a class="page-link" href="{{ next_doc.url | relative_url }}" aria-label="Next">
+              Next &rarr;
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+    <div class="clearfix"></div>
+    {% break %}
+  {% endif %}
+{% endfor %}

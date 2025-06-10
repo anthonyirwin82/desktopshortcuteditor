@@ -1,0 +1,75 @@
+---
+layout: default
+pagination: 
+  enabled: true
+---
+{% include author_vars.html %}
+<div class="bg-dark text-light py-5 mb-4 border-bottom" style="background: url('{{ "/assets/img/bg.jpg" | relative_url }}') no-repeat center center; background-size: cover;">
+  <div class="container">
+    <h1 class="outlined-text display-4">{{ page.title }}</h1>
+    <p class="outlined-text lead">
+      {{ page.date | date: "%b %-d, %Y" }}
+      {% if page.author %} • {{ page.author }}{% endif %}
+      {% if page.meta %} • {{ page.meta }}{% endif %}
+    </p>
+  </div>
+</div>
+
+<div class="container my-4">
+  <div class="row">
+    <!-- Main Content -->
+    <div class="col-md-8">
+      <div id="markdown-content-container">{{ content }}</div>
+      <hr />
+
+      <!-- Pagination (Older/Newer links) -->
+      <nav aria-label="Post navigation">
+        <ul class="pagination justify-content-between">
+          {% if page.previous %}
+          <li class="page-item">
+            <a class="page-link" href="{{ page.previous.url | relative_url }}">
+              &larr; Older
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">&larr; Older</span>
+          </li>
+          {% endif %}
+
+          {% if page.next %}
+          <li class="page-item">
+            <a class="page-link" href="{{ page.next.url | relative_url }}">
+              Newer &rarr;
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">Newer &rarr;</span>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+
+        <!-- Sidebar -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recent Posts</h5>
+          <ul class="list-unstyled post-list-container">
+            {% for post in site.posts limit:10 %}
+            <li>
+              <a href="{{ post.url | relative_url }}" {% if page.title==post.title %} class="fw-bold text-primary" {% endif %}>
+                {{ post.title }}
+              </a>
+            </li>
+            {% endfor %}
+            <li><a href="{{ "/allposts" | relative_url }}">All posts ...</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

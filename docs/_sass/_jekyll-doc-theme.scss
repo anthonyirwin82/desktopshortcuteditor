@@ -1,0 +1,78 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 46px;
+}
+
+// Navbar brand image tweaks
+.navbar-brand img {
+  height: 56px; // Standard Bootstrap 5 navbar height
+  padding: 10px 0;
+  margin: -10px 0; // Simulated from $navbar-padding-vertical
+}
+
+// Hero/header section
+.header-container {
+  background-color: black;
+  background: url('../img/bg.jpg') no-repeat 50% 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center 36%;
+  margin-top: -37px;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+// Custom navbar container adjustments
+.navbar-container {
+  font-size: 16px;
+}
+
+// Main content spacing
+.page-content {
+  padding-bottom: 20px;
+}
+
+// Sticky footer adjustments
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #b1afaf; // Replacing $gray-lighter
+  color: #343a40; // Replacing $gray-dark
+}
+
+// Active link styling
+.post-list-container {
+  li a.active {
+    font-weight: bold;
+  }
+}
+
+// Offset anchor targets for fixed navbar
+*[id]::before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
+// Search input icon alignment inside input-group
+.input-group .form-control::placeholder {
+  padding-left: 30px;
+}
+
+.input-group-text i.fa {
+  margin-right: 5px;
+}
+
+#search-box {
+  padding-left: 2rem;
+}

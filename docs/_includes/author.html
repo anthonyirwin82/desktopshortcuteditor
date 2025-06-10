@@ -1,0 +1,44 @@
+<div class="bg-dark text-light py-5 mb-4 border-bottom" style="background: url('{{ "/assets/img/bg.jpg" | relative_url }}') no-repeat center center; background-size: cover;">
+  <div class="container">
+    <h1 class="outlined-text display-4">{{ author.name }} Author Profile</h1>
+  </div>
+</div>
+<div class="container">
+   {% assign links = author.socials %}
+   <div class="card mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+         {% if author.img %}
+         <div class="col-md-4">
+            <img src="{{ author.img }}" class="img-fluid rounded-start" alt="{{ author.name }} photo">
+         </div>
+         {% endif %}
+         <div class="{% if author.img %}col-md-8{% else %}col-md-12{% endif %}">
+            <div class="card-body">
+               <h5 class="card-title">{{ author.name }}</h5>
+               <p class="card-text">{{ author.bio }}</p>
+               <div class="d-flex justify-content-center">
+                  {% if links.github %}
+                  <a href="{{ author.website }}" target="_blank" class="btn btn-primary me-2">Website</a>
+                  {% endif %}
+                  {% if links.github %}
+                  <a href="{{ links.github }}" target="_blank" class="btn btn-primary me-2">Github</a>
+                  {% endif %}
+                  {% if links.gitlab %}
+                  <a href="{{ links.gitlab }}" target="_blank" class="btn btn-primary me-2">Gitlab</a>
+                  {% endif %}
+                  {% if links.youtube %}
+                  <a href="{{ links.youtube }}" target="_blank" class="btn btn-primary me-2">YouTube</a>
+                  {% endif %}
+                  {% if links.linkedin %}
+                  <a href="{{ links.linkedin }}" target="_blank" class="btn btn-primary me-2">LinkedIn</a>
+                  {% endif %}
+                  {% if links.facebook %}
+                  <a href="{{ links.facebook }}" target="_blank" class="btn btn-primary me-2">FaceBook</a>
+                  {% endif %}
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

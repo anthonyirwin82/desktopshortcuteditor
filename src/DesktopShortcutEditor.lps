@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <ManyBuildModesSelection Value="Linux_x86_64-gtk2,Linux_arm64-gtk2,Linux_x86_64-gtk3,Linux_x86_64-qt6,Linux_arm64-qt6"/>
+    <BuildModes Active="Linux_x86_64-qt6"/>
+    <Units>
+      <Unit>
+        <Filename Value="DesktopShortcutEditor.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="50" Y="20"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDesktopShortcutEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DesktopShortcutEditorForm"/>
+        <CursorPos X="33" Y="9"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="desktopshortcuttexteditor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DesktopShortCutTextEditor"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="9"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="aboutform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AboutForm"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="55" Y="13"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/fpcsrc/packages/fcl-process/src/processbody.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="170"/>
+        <CursorPos X="10" Y="185"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/unix/unix.pp"/>
+        <UnitName Value="Unix"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="10" Y="86"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/lazarus/lcl/dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="890"/>
+        <CursorPos X="10" Y="898"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/lazarus/lcl/editbtn.pas"/>
+        <UnitName Value="EditBtn"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/unix/sysunixh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="2" Y="29"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/inc/systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1350"/>
+        <CursorPos X="13" Y="1373"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="DesktopShortcutEditor.res"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="9"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="41" Column="58"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="42" Column="58"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="44" Column="58" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="47" Column="52" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="62" Column="11" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="31" Column="19" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuteditorform.pas"/>
+        <Caret Line="140" Column="8" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="19" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="24" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="34" Column="43" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="DesktopShortcutEditor.lpr"/>
+        <Caret Line="29"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuttexteditor.pas"/>
+        <Caret Line="80" Column="33" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="desktopshortcuttexteditor.pas"/>
+        <Caret Column="9"/>
+      </Position>
+      <Position>
+        <Filename Value="DesktopShortcutEditor.lpr"/>
+        <Caret Line="29"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="35" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="36" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="35" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="36" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="37" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="36" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="37" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="36" Column="58" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="37" Column="42"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="44" Column="52" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="14" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="8" Column="85"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="57" Column="21" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="63" Column="18" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="68" Column="27" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="70" Column="27" TopLine="42"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

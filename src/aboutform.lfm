@@ -1,0 +1,151 @@
+object frmAbout: TfrmAbout
+  Left = 330
+  Height = 268
+  Top = 31
+  Width = 800
+  BorderStyle = bsDialog
+  Caption = 'About Desktop Shortcut Editor'
+  ClientHeight = 268
+  ClientWidth = 800
+  Position = poOwnerFormCenter
+  OnCreate = FormCreate
+  object imgApp: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 25
+    Height = 128
+    Top = 70
+    Width = 127
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Left = 25
+    BorderSpacing.Right = 25
+  end
+  object lblAppName: TLabel
+    AnchorSideLeft.Control = imgApp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 177
+    Height = 55
+    Top = 19
+    Width = 623
+    Alignment = taCenter
+    Anchors = [akLeft, akRight]
+    BorderSpacing.Top = 20
+    Caption = 'Application Name'
+    Font.Height = -40
+    Font.Name = 'Sans'
+    ParentFont = False
+  end
+  object lblAuthor: TLabel
+    AnchorSideLeft.Control = imgApp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = lblAppName
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 177
+    Height = 19
+    Top = 79
+    Width = 623
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 5
+    Caption = 'Application Developer'
+  end
+  object lblDescription: TLabel
+    AnchorSideLeft.Control = imgApp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = lblAuthor
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 177
+    Height = 19
+    Top = 108
+    Width = 623
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    Caption = 'lblDescription'
+  end
+  object Panel: TPanel
+    AnchorSideLeft.Control = lblAppName
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = lblDescription
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = btnClose
+    Left = 302
+    Height = 33
+    Top = 184
+    Width = 373
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Top = 60
+    BorderSpacing.Bottom = 15
+    BevelOuter = bvNone
+    ClientHeight = 33
+    ClientWidth = 373
+    TabOrder = 0
+    object btnSoftware: TButton
+      Left = 0
+      Height = 33
+      Top = 0
+      Width = 120
+      AutoSize = True
+      Caption = '&Software Website'
+      TabOrder = 0
+      OnClick = btnSoftwareClick
+    end
+    object btnRepo: TButton
+      AnchorSideLeft.Control = btnSoftware
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnSoftware
+      AnchorSideTop.Side = asrCenter
+      Left = 130
+      Height = 33
+      Top = 0
+      Width = 124
+      AutoSize = True
+      BorderSpacing.Left = 10
+      Caption = 'Source Code &Repo'
+      TabOrder = 1
+      OnClick = btnRepoClick
+    end
+    object btnAuthor: TButton
+      AnchorSideLeft.Control = btnRepo
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnRepo
+      AnchorSideTop.Side = asrCenter
+      Left = 264
+      Height = 33
+      Top = 0
+      Width = 109
+      AutoSize = True
+      BorderSpacing.Left = 10
+      Caption = 'Author &Website'
+      TabOrder = 2
+      OnClick = btnAuthorClick
+    end
+  end
+  object btnClose: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 712
+    Height = 26
+    Top = 232
+    Width = 78
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 10
+    BorderSpacing.Bottom = 10
+    Caption = '&Close'
+    TabOrder = 1
+    OnClick = btnCloseClick
+  end
+end

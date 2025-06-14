@@ -1,3 +1,7 @@
 src/bin/
 src/lib/
 src/backup/
+release/deb
+release/rpm
+release/*.deb
+release/*.rpm

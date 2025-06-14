@@ -2,15 +2,15 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="12"/>
-    <ManyBuildModesSelection Value="Linux_x86_64-gtk2,Linux_arm64-gtk2,Linux_x86_64-gtk3,Linux_x86_64-qt6,Linux_arm64-qt6"/>
-    <BuildModes Active="Linux_x86_64-qt6"/>
+    <ManyBuildModesSelection Value="linux_amd64-gtk2,linux_arm64-gtk2,linux_amd64-gtk3,linux_amd64-qt6,linux_arm64-qt6"/>
+    <BuildModes Active="linux_amd64-qt5"/>
     <Units>
       <Unit>
         <Filename Value="DesktopShortcutEditor.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="50" Y="20"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -22,7 +22,7 @@
         <UnitName Value="DesktopShortcutEditorForm"/>
         <TopLine Value="23"/>
         <CursorPos X="75" Y="48"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,7 +33,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="35"/>
         <CursorPos X="21" Y="66"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -46,7 +46,7 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="218" Y="15"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -55,7 +55,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="170"/>
         <CursorPos X="10" Y="185"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/unix/unix.pp"/>
@@ -63,7 +63,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos X="10" Y="86"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/files/lazarus/lcl/dialogs.pp"/>
@@ -71,33 +71,33 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="890"/>
         <CursorPos X="10" Y="898"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/files/lazarus/lcl/editbtn.pas"/>
         <UnitName Value="EditBtn"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/unix/sysunixh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="18"/>
         <CursorPos X="2" Y="29"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/files/fpcsrc/rtl/inc/systemh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1350"/>
         <CursorPos X="13" Y="1373"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="DesktopShortcutEditor.res"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="9"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>

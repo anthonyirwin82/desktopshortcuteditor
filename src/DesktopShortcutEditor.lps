@@ -3,14 +3,14 @@
   <ProjectSession>
     <Version Value="12"/>
     <ManyBuildModesSelection Value="linux_amd64-gtk2,linux_arm64-gtk2,linux_amd64-gtk3,linux_amd64-qt6,linux_arm64-qt6"/>
-    <BuildModes Active="linux_amd64-qt5"/>
+    <BuildModes Active="linux_amd64-qt6"/>
     <Units>
       <Unit>
         <Filename Value="DesktopShortcutEditor.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="50" Y="20"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DesktopShortcutEditorForm"/>
-        <TopLine Value="23"/>
+        <TopLine Value="82"/>
         <CursorPos X="75" Y="48"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,9 +31,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="DesktopShortCutTextEditor"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="35"/>
-        <CursorPos X="21" Y="66"/>
-        <UsageCount Value="63"/>
+        <TopLine Value="71"/>
+        <CursorPos X="78" Y="86"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -45,8 +45,8 @@
         <UnitName Value="AboutForm"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="218" Y="15"/>
-        <UsageCount Value="39"/>
+        <CursorPos Y="4"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>

@@ -21,51 +21,53 @@ LAZBUILD=${HOME}/fpcupdeluxe/files/lazarus/lazbuild
 PCP=${HOME}/fpcupdeluxe/files/config_lazarus
 # Debian Control file Specfic
 DEB_DIR=${PROJECT_PATH}/release/deb
+DEB_GTK2=libgtk2.0-0
 DEB_QT5=libqt5pas1
 DEB_QT6=libqt6pas6
-DEB_DEPENDS=""
+DEB_DEPENDS="policykit-1"
 DEB_SECTION="utils"
 
 rm ${PROJECT_PATH}/src/bin/* # Delete all build files
 
-# Build binary files. --bm names come from lazarus project options build modes
-$LAZBUILD ${PROJECT_PATH}/src/${PROJECT} -B --pcp=${PCP} --bm=linux_amd64-qt5
-$LAZBUILD ${PROJECT_PATH}/src/${PROJECT} -B --pcp=${PCP} --bm=linux_amd64-qt6
-$LAZBUILD ${PROJECT_PATH}/src/${PROJECT} -B --pcp=${PCP} --bm=linux_arm64-qt5
-$LAZBUILD ${PROJECT_PATH}/src/${PROJECT} -B --pcp=${PCP} --bm=linux_arm64-qt6
-
 rm -rf ${DEB_DIR} # Delete all existing files
 
-for CPU in "amd64" "arm64"
-do
-   # Lazarus cpu architecture names differ from Debian Architecture names
-   CPU_NAME=""
-   if [ "$CPU" = "amd64" ]; then
-      CPU_NAME="x86_64"
-   fi
+CPU_NAME=""
+DEB_DEPENDS_ON=""
+for CPU in "amd64" "arm64"; do
+  # Map Lazarus CPU names to Debian architecture names
+  case "$CPU" in
+    amd64) CPU_NAME="x86_64" ;;
+    arm64) CPU_NAME="aarch64" ;;
+  esac
 
-   if [ "$CPU" = "arm64" ]; then
-      CPU_NAME="aarch64"
-   fi
-
-   echo "Building Deb Directories for the ${CPU} architecture"
-   for WIDGET in "qt5" "qt6"
-   do
+  for WIDGET in "gtk2" "qt5" "qt6"; do
       DEB_DEPENDS_ON=""
       # Add Qt dependencies
-      if [ "$WIDGET" = "qt5" ]; then
-         DEB_DEPENDS_ON="${DEB_QT5} ${DEB_DEPENDS}"
-      fi
+      case "$WIDGET" in
+         qt5)
+            DEB_DEPENDS_ON="${DEB_QT5}, ${DEB_DEPENDS}"
+            ;;
+         qt6)
+            DEB_DEPENDS_ON="${DEB_QT6}, ${DEB_DEPENDS}"
+            ;;
+         gtk2)
+            DEB_DEPENDS_ON="${DEB_GTK2}, ${DEB_DEPENDS}"
+            ;;
+         *)
+            DEB_DEPENDS_ON="${DEB_DEPENDS}"
+            ;;
+      esac
 
-      if [ "$WIDGET" = "qt6" ]; then
-         DEB_DEPENDS_ON="${DEB_QT6} ${DEB_DEPENDS}"
-      fi
+      echo "--------------------------------------------------------------------\n"
+      echo "Building Project for ${CPU} architecture with ${WIDGET} widget set\n"
+      echo "--------------------------------------------------------------------\n"
+      
+      $LAZBUILD ${PROJECT_PATH}/src/${PROJECT} -B --pcp=${PCP} --bm=linux_${CPU}-${WIDGET}
 
       echo "Building Deb directories for the ${WIDGET} widget set"
       mkdir -p ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/DEBIAN
-      mkdir -p ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/usr/share/applications
+      mkdir -p ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/usr/share/{applications,pixmaps}
       mkdir -p ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/usr/bin
-      mkdir -p ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/usr/share/pixmaps
 
       # Copy the icon
       cp ${PROJECT_PATH}/src/icons/${ICON} ${DEB_DIR}/${NAME}-${VERSION}-${CPU}-${WIDGET}/usr/share/pixmaps

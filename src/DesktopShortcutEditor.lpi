@@ -24,36 +24,13 @@
       <StringTable Comments="Desktop Shortcut Editor allows you to easily add, search and edit desktop entry files" CompanyName="Anthony Irwin" FileDescription="Desktop Shortcut Editor allows you to easily add, search and edit desktop entry files" ProductName="Desktop Shortcut Editor" ProductVersion="1.0.0"/>
     </VersionInfo>
     <MacroValues Count="1">
-      <Macro2 Name="LCLWidgetType" Value="gtk2"/>
+      <Macro1 Name="LCLWidgetType" Value="gtk2"/>
     </MacroValues>
     <BuildModes>
       <Item Name="linux_amd64-gtk2" Default="True"/>
-      <Item Name="linux_arm64-gtk2">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <Target>
-            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-gtk2"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <TargetCPU Value="aarch64"/>
-            <TargetOS Value="linux"/>
-          </CodeGeneration>
-          <Linking>
-            <Options>
-              <Win32>
-                <GraphicApplication Value="True"/>
-              </Win32>
-            </Options>
-          </Linking>
-        </CompilerOptions>
-      </Item>
       <Item Name="linux_amd64-gtk3">
         <MacroValues Count="1">
-          <Macro3 Name="LCLWidgetType" Value="gtk3"/>
+          <Macro2 Name="LCLWidgetType" Value="gtk3"/>
         </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
@@ -77,61 +54,9 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <Item Name="linux_amd64-qt6">
-        <MacroValues Count="1">
-          <Macro1 Name="LCLWidgetType" Value="qt6"/>
-        </MacroValues>
-        <CompilerOptions>
-          <Version Value="11"/>
-          <Target>
-            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-qt6"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="linux"/>
-          </CodeGeneration>
-          <Linking>
-            <Options>
-              <Win32>
-                <GraphicApplication Value="True"/>
-              </Win32>
-            </Options>
-          </Linking>
-          <Other>
-            <CustomOptions Value="-FcUTF8"/>
-          </Other>
-        </CompilerOptions>
-      </Item>
-      <Item Name="linux_arm64-qt6">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <Target>
-            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-qt6"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <TargetCPU Value="aarch64"/>
-            <TargetOS Value="linux"/>
-          </CodeGeneration>
-          <Linking>
-            <Options>
-              <Win32>
-                <GraphicApplication Value="True"/>
-              </Win32>
-            </Options>
-          </Linking>
-        </CompilerOptions>
-      </Item>
       <Item Name="linux_amd64-qt5">
         <MacroValues Count="1">
-          <Macro5 Name="LCLWidgetType" Value="qt5"/>
+          <Macro3 Name="LCLWidgetType" Value="qt5"/>
         </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
@@ -156,11 +81,66 @@
           <Other>
             <CustomOptions Value="-FcUTF8"/>
           </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="linux_amd64-qt6">
+        <MacroValues Count="1">
+          <Macro4 Name="LCLWidgetType" Value="qt6"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-qt6"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-FcUTF8"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="linux_arm64-gtk2">
+        <MacroValues Count="1">
+          <Macro1 Name="LCLWidgetType" Value="gtk2"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-gtk2"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="aarch64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
         </CompilerOptions>
       </Item>
       <Item Name="linux_arm64-qt5">
         <MacroValues Count="1">
-          <Macro4 Name="LCLWidgetType" Value="qt5"/>
+          <Macro3 Name="LCLWidgetType" Value="qt5"/>
         </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
@@ -184,12 +164,37 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <SharedMatrixOptions Count="5">
-        <Item1 ID="267298271900" Modes="linux_amd64-qt6" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt6"/>
-        <Item2 ID="409448827229" Modes="linux_amd64-gtk2" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk2"/>
-        <Item3 ID="139929250148" Modes="linux_amd64-gtk3" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk3"/>
-        <Item4 ID="072398284187" Modes="linux_arm64-qt5" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
-        <Item5 ID="717159608884" Modes="linux_amd64-qt5" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
+      <Item Name="linux_arm64-qt6">
+        <MacroValues Count="1">
+          <Macro4 Name="LCLWidgetType" Value="qt6"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="bin/DesktopShortcutEditor-$(TargetCPU)-$(TargetOS)-qt6"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="aarch64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <SharedMatrixOptions Count="4">
+        <Item1 ID="409448827229" Modes="linux_amd64-gtk2,linux_arm64-gtk2" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk2"/>
+        <Item2 ID="139929250148" Modes="linux_amd64-gtk3" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk3"/>
+        <Item3 ID="072398284187" Modes="linux_arm64-qt5,linux_amd64-qt5" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
+        <Item4 ID="267298271900" Modes="linux_amd64-qt6,linux_arm64-qt6" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt6"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>

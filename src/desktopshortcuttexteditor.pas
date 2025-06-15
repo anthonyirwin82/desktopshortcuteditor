@@ -15,10 +15,10 @@ uses
 var
   // Use gtk or qt editors first based on widget set being built for
   {$IF DEFINED(LCLQT5) or DEFINED(LCLQT6)}
-  editors: array[0..5] of string = ('kwrite', 'kate', 'gedit', 'pluma', 'leafpad', 'mousepad');
+  editors: array[0..3] of string = ('kwrite', 'kate', 'gedit', 'pluma');
   {$ENDIF}
   {$IF DEFINED(LCLGTK2) or DEFINED(LCLGTK3)}
-  editors: array[0..5] of string = ('gedit', 'pluma', 'leafpad', 'mousepad', 'kwrite', 'kate');
+  editors: array[0..3] of string = ('gedit', 'pluma', 'kwrite', 'kate');
   {$ENDIF}
   i: Integer;
   env, runCommandOutput: string;
@@ -32,7 +32,7 @@ begin
     if RunCommand('which', [editors[i]], runCommandOutput) then
     begin
       cmd := 'sh -c "' + 'echo -e ''' + aDesktopFile + ''' > ''' + aFilename + ''' && ' +
-      		     env + ' ' + editors[i] + ' ''' + aFilename + '''"';
+      		     env + ' ' + editors[i] + ' ''' + aFilename + '''" &';
 
       if not aIsNormalUserFile then
         // Requires root privileges to save system files as normal user
@@ -83,7 +83,7 @@ begin
     begin
       if not aIsNormalUserFile then
         // Requires root privileges to save system files as normal user
-        fpsystem('pkexec ' + env + ' ' + editors[i] + ' "' + aFilename + '"')
+        fpsystem('pkexec ' + env + ' ' + editors[i] + ' "' + aFilename + '" &')
       else
       	 RunCommand(editors[i], aFilename, runCommandOutput);
 

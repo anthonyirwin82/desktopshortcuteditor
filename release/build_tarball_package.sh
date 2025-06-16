@@ -1,8 +1,8 @@
 #!/usr/bin/sh
 #
 # This is a build script that will build the lazarus desktop application and
-# package it into RPM packages for qt5 and qt6 on the x86_64 and aarch64
-# Linux RPM-based distributions.
+# package it into tarball packages for qt5 and qt6 on the x86_64 and aarch64
+# Linux based distributions.
 # It relies on the Lazarus Project Options - Build Modes to work.
 # You need to have the following build mode names:
 # linux_amd64-qt5, linux_amd64-qt6, linux_arm64-qt5, linux_arm64-qt6

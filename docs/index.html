@@ -17,11 +17,54 @@ layout: default
 <div class="container">
   <div class="row align-items-center mb-5">
     <div class="col-lg-12">
-      <h2 class="fw-light mb-3">{{ site.title }} Overview Video</a></h2>
+      <h2 class="fw-light mb-3">{{ site.title }} Overview Video</h2>
       <p class="lead">Video Coming soon.</p>
 
-      <h2 class="fw-light mb-3">Download {{ site.title }}</a></h2>
-      <p class="lead">downloads Coming soon.</p>
+      <h2 class="fw-light mb-3">Download {{ site.title }}</h2>
+      <p>I have provided builds for common systems for gtk2, qt5 and qt6 with the following exceptions:</p>
+      <p><strong>Flatpak:</strong> When I looked into providing Flatpak packages I found that they run in a sandboxed environment so Flatpak is not well suited to a utility app like this that edits system files.</p>
+
+      <p><strong>qt6 on aarch64:</strong> I have not provided a qt6 aarch64 build as the fpcupdeluxe cross compiler setup I use does not currently have the libqt6pas libraries for linking into the compiled binary. I will do a build for qt6 aarch64 when this is updated with the build pipeline tools I use.</p>
+      <h3 class="fw-light mb-3">Download DEB Packages</h3>
+      <p>DEB builds tested on Ubuntu and Debian.</p>
+        <ul>
+          <li>All versions work on Ubuntu 25.04 and newer providing you have the required libraries installed.</li>
+          <li>Ubuntu 24.04 LTS has the GTK2 and QT5 versions working because 24.04 LTS does not provide a package for libqt6pas6.</li>
+          <li>Debian 12 only the GTK2 version works as the libqt5pas1 library they have is not working with the latest qt5 builds.</li>
+        </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <h4 class="fw-light mb-3">amd64</h4>
+            <ul>
+              <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-amd64-qt5.deb" target="_blank">desktop-shortcut-editor-1.0.0-amd64-qt5.deb</a></li>
+              <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-amd64-qt6.deb" target="_blank">desktop-shortcut-editor-1.0.0-amd64-qt6.deb</a></li>
+              <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-amd64-gtk2.deb" target="_blank">desktop-shortcut-editor-1.0.0-amd64-gtk2.deb</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-12">
+            <h4 class="fw-light mb-3">arm64</h4>
+            <ul>
+              <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-arm64-qt5.deb" target="_blank">desktop-shortcut-editor-1.0.0-arm64-qt5.deb</a></li>
+              <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-arm64-gtk2.deb" target="_blank">desktop-shortcut-editor-1.0.0-arm64-gtk2.deb</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="fw-light mb-3">Download RPM Packages</a></h3>
+      <p>RPM builds tested on Fedora 42, unfortunately the rpm build system didn't allow me to cross build the aarch64 RPMS for arm64 systems so only x86_64 builds are provided by me at this time. There is a generic tarball for aarch64 with builds for gtk2 and qt5.</p>
+        <ul>
+          <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-1.qt5.x86_64.rpm" target="_blank">desktop-shortcut-editor-1.0.0-1.qt5.x86_64.rpm</a></li>
+          <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-1.qt6.x86_64.rpm" target="_blank">desktop-shortcut-editor-1.0.0-1.qt6.x86_64.rpm</a></li>
+          <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-1.gtk2.x86_64.rpm" target="_blank">desktop-shortcut-editor-1.0.0-1.gtk2.x86_64.rpm</a></li>
+        </ul>
+      <h3 class="fw-light mb-3">Download Generic Tarballs</a></h3>
+      <p>I have combined all the builds and an icon file into the tarball download for x86_64 and aarch64 architectures so you can choose which version you want to run.</p>
+      <ul>
+        <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-x86_64-all.tar.gz" target="_blank">desktop-shortcut-editor-1.0.0-x86_64-all.tar.gz</a></li>
+        <li><a href="https://github.com/anthonyirwin82/desktopshortcuteditor/releases/download/v1.0.0/desktop-shortcut-editor-1.0.0-aarch64-all.tar.gz" target="_blank">desktop-shortcut-editor-1.0.0-aarch64-all.tar.gz</a></li>
+      </ul>
     </div>
   </div>
 </div>

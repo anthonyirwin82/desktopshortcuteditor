@@ -4,5 +4,7 @@ src/lib/
 src/backup/
 release/deb
 release/rpm
+release/tarball
 release/*.deb
 release/*.rpm
+release/*.tar.gz

@@ -11,7 +11,7 @@
 
 VERSION=1.0.0
 PROJECT=DesktopShortcutEditor.lpi
-PROJECT_PATH=${HOME}/repos/pascal/DesktopShortcutEditor
+PROJECT_PATH=${HOME}/repos/pascal/desktopshortcuteditor
 NAME=desktop-shortcut-editor
 TITLE="Desktop Shortcut Editor"
 DESCRIPTION="Desktop Shortcut Editor makes it very easy to add, search and edit desktop entry files in desktop environments and application launchers that uses the free desktop entry file specification."
